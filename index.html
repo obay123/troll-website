@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Troll Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+
+  <!-- Background doodles -->
+  <div class="bg-doodles" aria-hidden="true">
+    <span class="doodle doodle-note-1">Sep 16 ✨</span>
+    <span class="doodle doodle-note-2"> Nov 1 ♡</span>
+    <span class="doodle doodle-note-3"> :)</span>
+    <span class="doodle doodle-note-4"> ♡</span>
+    <span class="doodle doodle-note-5"></span>
+    <span class="doodle doodle-note-6">made with love</span>
+
+    <svg class="doodle-icon icon-tl" viewBox="0 0 100 100" aria-hidden="true"><use href="#heart"/></svg>
+    <svg class="doodle-icon icon-tr" viewBox="0 0 100 100" aria-hidden="true"><use href="#star"/></svg>
+    <svg class="doodle-icon icon-ml" viewBox="0 0 100 100" aria-hidden="true"><use href="#sparkle"/></svg>
+    <svg class="doodle-icon icon-mr" viewBox="0 0 100 100" aria-hidden="true"><use href="#heart"/></svg>
+    <svg class="doodle-icon icon-bl" viewBox="0 0 100 100" aria-hidden="true"><use href="#star"/></svg>
+    <svg class="doodle-icon icon-br" viewBox="0 0 100 100" aria-hidden="true"><use href="#sparkle"/></svg>
+  </div>
+
+  <!-- SVG defs -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <defs>
+      <symbol id="trollface" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="52" rx="42" ry="44" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+        <path d="M18 38 Q28 18 50 22 Q72 18 82 38" fill="none" stroke="#000" stroke-width="2.5"/>
+        <ellipse cx="35" cy="48" rx="9" ry="11" fill="#fff" stroke="#000" stroke-width="2"/>
+        <ellipse cx="65" cy="48" rx="9" ry="11" fill="#fff" stroke="#000" stroke-width="2"/>
+        <circle cx="35" cy="50" r="3" fill="#000"/>
+        <circle cx="65" cy="50" r="3" fill="#000"/>
+        <path d="M28 72 Q50 88 72 72" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="trollface-shades" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="52" rx="42" ry="44" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+        <path d="M18 38 Q28 18 50 22 Q72 18 82 38" fill="none" stroke="#000" stroke-width="2.5"/>
+        <rect x="22" y="42" width="56" height="14" rx="3" fill="#111"/>
+        <line x1="50" y1="42" x2="50" y2="56" stroke="#333" stroke-width="2"/>
+        <path d="M28 72 Q50 88 72 72" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="lolface" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="52" rx="42" ry="44" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+        <path d="M20 35 Q35 15 50 20 Q65 15 80 35" fill="none" stroke="#000" stroke-width="2.5"/>
+        <ellipse cx="35" cy="46" rx="8" ry="10" fill="#fff" stroke="#000" stroke-width="2"/>
+        <ellipse cx="65" cy="46" rx="8" ry="10" fill="#fff" stroke="#000" stroke-width="2"/>
+        <circle cx="35" cy="48" r="3" fill="#000"/>
+        <circle cx="65" cy="48" r="3" fill="#000"/>
+        <path d="M25 68 Q50 90 75 68" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+        <path d="M30 72 L35 76 L30 80" fill="none" stroke="#000" stroke-width="2"/>
+        <path d="M70 72 L65 76 L70 80" fill="none" stroke="#000" stroke-width="2"/>
+      </symbol>
+      <symbol id="forever-alone" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="52" rx="42" ry="44" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+        <ellipse cx="35" cy="48" rx="9" ry="11" fill="#fff" stroke="#000" stroke-width="2"/>
+        <ellipse cx="65" cy="48" rx="9" ry="11" fill="#fff" stroke="#000" stroke-width="2"/>
+        <circle cx="35" cy="52" r="3" fill="#000"/>
+        <circle cx="65" cy="52" r="3" fill="#000"/>
+        <path d="M30 30 Q50 10 70 30" fill="none" stroke="#000" stroke-width="2"/>
+        <path d="M38 72 Q50 78 62 72" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="42" cy="58" r="4" fill="#87CEEB" opacity="0.7"/>
+      </symbol>
+      <symbol id="crown" viewBox="0 0 60 40">
+        <path d="M5 35 L5 20 L15 28 L30 10 L45 28 L55 20 L55 35 Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="15" cy="28" r="3" fill="#fff"/>
+        <circle cx="30" cy="10" r="3" fill="#fff"/>
+        <circle cx="45" cy="28" r="3" fill="#fff"/>
+      </symbol>
+      <symbol id="trollface-sm" viewBox="0 0 100 100">
+        <use href="#trollface"/>
+      </symbol>
+      <symbol id="heart" viewBox="0 0 100 100">
+        <path d="M50 88 C18 62 2 46 2 28 C2 14 14 4 28 4 C38 4 46 12 50 22 C54 12 62 4 72 4 C86 4 98 14 98 28 C98 46 82 62 50 88 Z" fill="#ff6b9d"/>
+      </symbol>
+      <symbol id="star" viewBox="0 0 100 100">
+        <path d="M50 8 L61 38 L94 38 L67 58 L78 90 L50 70 L22 90 L33 58 L6 38 L39 38 Z" fill="#ffd966"/>
+      </symbol>
+      <symbol id="sparkle" viewBox="0 0 100 100">
+        <path d="M50 8 L54 42 L88 50 L54 58 L50 92 L46 58 L12 50 L46 42 Z" fill="#c9a0ff"/>
+        <circle cx="50" cy="50" r="6" fill="#fff"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="container">
+    <header class="hero">
+      <svg class="crown" viewBox="0 0 60 40" aria-hidden="true"><use href="#crown"/></svg>
+
+      <h1 class="title">
+        <span class="title-welcome">Welcome</span>
+        <span class="title-troll">Hello </span>
+        <span class="title-troll-name">Μελίνα</span>
+        <span class="title-troll"> !!!!!!!!!!!!</span>
+      </h1>
+
+      <p class="subtitle">
+        Visit this Site whenever you feel sad to have a smile .... maybe xD
+      </p>
+
+      <button class="cta-btn" id="ctaBtn" type="button">
+        <svg class="btn-face" viewBox="0 0 100 100" aria-hidden="true"><use href="#trollface-sm"/></svg>
+        <span>VIEW MEME VIDEO</span>
+        <span class="chevron">&rsaquo;</span>
+      </button>
+
+      <p class="warning">⚠️ Warning: May cause extreme laughter or light smile :)</p>
+    </header>
+
+    <section class="video-modal hidden" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+      <button class="modal-backdrop" id="modalBackdrop" type="button" aria-label="Close modal"></button>
+
+      <div class="modal-dialog">
+        <div class="tape tape-tl"></div>
+        <div class="tape tape-br"></div>
+
+        <div class="modal-inner">
+        <div class="modal-header">
+          <h2 id="modalTitle">ENJOY YOUR DOSE OF laugh :) </h2>
+          <button class="close-btn" id="closeBtn" type="button" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="video-carousel" id="videoCarousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+              <div class="carousel-slide">
+                <div class="video-wrap">
+                  <video class="meme-video" controls playsinline preload="metadata" poster="assets/poster.svg">
+                    <source src="videos/bald guy drinks orange juice.mp4" type="video/mp4">
+                    Your browser does not support video.
+                  </video>
+                  <div class="video-overlay">
+                    <svg class="overlay-face" viewBox="0 0 100 100"><use href="#trollface-sm"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="video-wrap">
+                  <video class="meme-video" controls playsinline preload="metadata">
+                    <source src="videos/Black Guy crying MEME.mp4" type="video/mp4">
+                    Your browser does not support video.
+                  </video>
+                  <div class="video-overlay">
+                    <svg class="overlay-face" viewBox="0 0 100 100"><use href="#trollface-sm"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-arrow carousel-prev" id="carouselPrev" type="button" aria-label="Previous video">‹</button>
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Video slides">
+              <button class="carousel-dot active" type="button" data-slide="0" aria-label="Video 1" aria-selected="true"></button>
+              <button class="carousel-dot" type="button" data-slide="1" aria-label="Video 2" aria-selected="false"></button>
+            </div>
+            <button class="carousel-arrow carousel-next" id="carouselNext" type="button" aria-label="Next video">›</button>
+          </div>
+          <p class="swipe-hint">Swipe left for the next video →</p>
+        </div>
+
+        <p class="modal-footer">💀 LOL 💀</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="checkered" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <p>© 2026Troll Zone. All Rights Reserved.</p>
+      <p class="evil">made with 100% evil intentions 😈</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#1a1a1a"/>
+  <ellipse cx="320" cy="280" rx="180" ry="90" fill="#222"/>
+  <ellipse cx="320" cy="220" rx="120" ry="100" fill="#c4a882"/>
+  <ellipse cx="260" cy="180" rx="35" ry="40" fill="#c4a882"/>
+  <ellipse cx="380" cy="180" rx="35" ry="40" fill="#c4a882"/>
+  <polygon points="240,160 220,100 260,140" fill="#c4a882"/>
+  <polygon points="400,160 420,100 380,140" fill="#c4a882"/>
+  <ellipse cx="290" cy="210" rx="12" ry="14" fill="#fff"/>
+  <ellipse cx="350" cy="210" rx="12" ry="14" fill="#fff"/>
+  <circle cx="290" cy="212" r="6" fill="#2d5a27"/>
+  <circle cx="350" cy="212" r="6" fill="#2d5a27"/>
+  <ellipse cx="320" cy="250" rx="8" ry="6" fill="#e8a0a0"/>
+  <path d="M300 260 Q320 275 340 260" fill="none" stroke="#666" stroke-width="2"/>
+  <!-- Trollface overlay -->
+  <g transform="translate(248, 130) scale(0.85)">
+    <ellipse cx="50" cy="52" rx="42" ry="44" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+    <path d="M18 38 Q28 18 50 22 Q72 18 82 38" fill="none" stroke="#000" stroke-width="2.5"/>
+    <ellipse cx="35" cy="48" rx="9" ry="11" fill="#fff" stroke="#000" stroke-width="2"/>
+    <ellipse cx="65" cy="48" rx="9" ry="11" fill="#fff" stroke="#000" stroke-width="2"/>
+    <circle cx="35" cy="50" r="3" fill="#000"/>
+    <circle cx="65" cy="50" r="3" fill="#000"/>
+    <path d="M28 72 Q50 88 72 72" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>
