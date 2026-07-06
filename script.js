@@ -27,7 +27,18 @@ function pauseAllVideos() {
 function playCurrentVideo() {
   const video = videos[currentSlide];
   if (!video) return;
-  video.play().catch(() => {});
+
+  const startPlayback = () => {
+    video.play().catch(() => {});
+  };
+
+  if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+    startPlayback();
+    return;
+  }
+
+  video.addEventListener('canplay', startPlayback, { once: true });
+  video.load();
 }
 
 function updateCarousel(animate = true) {
